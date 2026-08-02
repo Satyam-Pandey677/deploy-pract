@@ -6,8 +6,10 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 
-app.get("/", () => {
-    console.log("hello")
+app.get("/", (req, res) => {
+   return res.status(200).json({
+    message:"Hello server is running"
+   })
 })
 
 app.post("/upload", upload.single("image"), uploadController )
