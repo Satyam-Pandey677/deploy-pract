@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 
-console.log(process.env.PORT)
+console.log(process.env.Checking)
 app.get("/", (req, res) => {
    return res.status(200).json({
     message:"Hello server is running"
